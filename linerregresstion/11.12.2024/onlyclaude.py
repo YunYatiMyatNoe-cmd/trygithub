@@ -27,7 +27,6 @@ def get_answer_from_claude(question):
             "anthropic_version": "bedrock-2023-05-31"
         } 
 
-
         # Make the API call to AWS Bedrock
         response = bedrock_client.invoke_model(
             modelId="anthropic.claude-3-sonnet-20240229-v1:0",
@@ -87,4 +86,5 @@ def lambda_handler(event, context):
             'question': user_question,
             'response': answer
         })
+        
     }
